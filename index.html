@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Architecture | Visionary Design</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #888888;
+            letter-spacing: 0.1em;
+            margin-bottom: 40px;
+        }
+
+        button {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 15px 35px;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #0a0a0a;
+        }
+
+        .grid-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .card .arrow {
+            color: #9933ff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(153, 51, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+
+        .card:hover .arrow {
+            transform: translateX(6px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ANNA ARCHITECTS</h1>
+        <p>Shaping space. Defining the future horizon.</p>
+        <button>Explore Portfolio</button>
+    </header>
+
+    <section class="grid-section">
+        <div class="card">
+            <h3>Parametric Towers</h3>
+            <p>Fluid, organic high-rise structures utilizing advanced computational design algorithms.</p>
+            <span class="arrow">View Projects →</span>
+        </div>
+
+        <div class="card">
+            <h3>Cultural Hubs</h3>
+            <p>State-of-the-art museums, pavilions, and public spaces designed to reshape communities.</p>
+            <span class="arrow">View Projects →</span>
+        </div>
+
+        <div class="card">
+            <h3>Luxury Residential</h3>
+            <p>Bespoke private estates engineered with seamless indoor-outdoor geometric fluidity.</p>
+            <span class="arrow">View Projects →</span>
+        </div>
+    </section>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const projectType = card.querySelector('h3').innerText;
+                alert(`Transitioning to ${projectType} Gallery instantly...`);
+            });
+        });
+    </script>
+</body>
+</html>
